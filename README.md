@@ -5,7 +5,7 @@ This is a demo of how to build a Retrieval Augemented Generation based Chatbot t
 First, clone the repository using
 
 ```bash
-git clone 
+git clone https://github.com/prabhatreddy/RAG-Chatbot-Demo.git
 ```
 
 This demo uses [Poetry](https://python-poetry.org/docs/) to manage dependencies. If you do not have Poetry installed, follow the instructions provided in their documentation to install it.
@@ -54,7 +54,7 @@ retriever = vector_store.as_retriever()
 (Do not forget that you will need to install `langchain-openai` or the langchain extension for the model provider of your choice)
 
 ## Usage
-For this demo, you will need a JSON document of questions and answers in the following format:
+For this demo, you will need to create a JSON document of questions and answers called 'responses.json' in the following format:
 
 ```JSON
 {
@@ -67,7 +67,13 @@ For this demo, you will need a JSON document of questions and answers in the fol
             "question": "<Question 2>",
             "answer" : "<Answer 2>"
         },
-        ...
     ]
 }
+```
+You can use the template file `template.json` to help do this.
+
+To run the demo
+
+```bash
+streamlit run app.py
 ```
